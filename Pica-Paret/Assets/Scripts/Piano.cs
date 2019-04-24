@@ -8,14 +8,19 @@ public class Piano : MonoBehaviour {
     public bool isOnKey = false;
     public bool canPress = false;
     public bool failed = false;
-    private int tecla;
+    public bool[] boolLetras = new bool[8];
+    public int tecla;
     private int curLvlTime;
     private float curTime;
     public float startTime;
-    public float upgradeTime;
-    private float curVel = -10;
+    public float upgradeTime = 2;
+    private float curVel = -5f;
+    private float timeToWait = 10;
+    private float curTimeToWait;
     public float upgradeVel;
     private char letra;
+    private int lastTecla;
+
     public Rigidbody2D Q;
     public Rigidbody2D W;
     public Rigidbody2D E;
@@ -24,14 +29,28 @@ public class Piano : MonoBehaviour {
     public Rigidbody2D I;
     public Rigidbody2D O;
     public Rigidbody2D P;
+
     System.Random RandomNum = new System.Random();
     //private new Vector3 startPos = Q.transform.position; 
     public int Fase = 0;
     public static int FaseParaMonstruo;
 
+    //public Collider2D QCollider;
+    //public Collider2D WCollider;
+    //public Collider2D ECollider;
+    //public Collider2D RCollider;
+    //public Collider2D UCollider;
+    //public Collider2D ICollider;
+    //public Collider2D OCollider;
+    //public Collider2D PCollider;
+
     // Use this for initialization
     void Start() {
         curTime = startTime;
+        for (int i = 0; i < 8; i++)
+        {
+            boolLetras[i] = false;
+        }
     }
 
     // Update is called once per frame
@@ -41,6 +60,11 @@ public class Piano : MonoBehaviour {
         //Debug.Log(curTime);
         //print(curTime);
         checkClick();
+        curTimeToWait -= Time.deltaTime;
+        if (curTimeToWait <= 0)
+        {
+            end = false;
+        }
     }
 
     void AssignKey()
@@ -48,152 +72,382 @@ public class Piano : MonoBehaviour {
         while (!end && curTime <= 0)
         {
             tecla = RandomNum.Next(1, 9);
-            switch (tecla)
-            {
-                case 1:
-                    Q.velocity = new Vector3(curVel, 0);
-                    isOnKey = true;
-                    letra = 'q';
-                    Q.transform.position = new Vector3(7.38f, -3.35f, -1);
+            //if (lastTecla != tecla)
+            //{
+                switch (tecla)
+                {
+                    case 1:
+                    if (!boolLetras[0])
+                    {
+                        Q.velocity = new Vector3(curVel, 0);
+                        isOnKey = true;
+                        letra = 'q';
+                        Q.transform.position = new Vector3(7.38f, -3.5f, -1);
+                        boolLetras[0] = true;
+                    }
                     break;
-                case 2:
-                    W.velocity = new Vector3(curVel, 0);
-                    isOnKey = true;
-                    letra = 'w';
-                    W.transform.position = new Vector3(7.38f, -3.35f, -1);
+                    case 2:
+                    if (!boolLetras[1])
+                    {
+                        W.velocity = new Vector3(curVel, 0);
+                        isOnKey = true;
+                        letra = 'w';
+                        W.transform.position = new Vector3(7.38f, -3.5f, -1);
+                        boolLetras[1] = true;
+                    }
                     break;
-                case 3:
-                    E.velocity = new Vector3(curVel, 0);
-                    isOnKey = true;
-                    letra = 'e';
-                    E.transform.position = new Vector3(7.38f, -3.35f, -1);
-                    break;
-                case 4:
-                    R.velocity = new Vector3(curVel, 0);
-                    isOnKey = true;
-                    letra = 'r';
-                    R.transform.position = new Vector3(7.38f, -3.35f, -1);
-                    break;
-                case 5:
-                    U.velocity = new Vector3(curVel, 0);
-                    isOnKey = true;
-                    letra = 'u';
-                    U.transform.position = new Vector3(7.38f, -3.35f, -1);
-                    break;
-                case 6:
-                    I.velocity = new Vector3(curVel, 0);
-                    isOnKey = true;
-                    letra = 'i';
-                    I.transform.position = new Vector3(7.38f, -3.35f, -1);
-                    break;
-                case 7:
-                    O.velocity = new Vector3(curVel, 0);
-                    isOnKey = true;
-                    letra = 'o';
-                    O.transform.position = new Vector3(7.38f, -3.35f, -1);
-                    break;
-                case 8:
-                    P.velocity = new Vector3(curVel, 0);
-                    isOnKey = true;
-                    letra = 'p';
-                    P.transform.position = new Vector3(7.38f, -3.35f, -1);
-                    break;
-            }
-            curTime = startTime;
+                    case 3:
+                    if (!boolLetras[2])
+                    {
+                        E.velocity = new Vector3(curVel, 0);
+                        isOnKey = true;
+                        letra = 'e';
+                        E.transform.position = new Vector3(7.38f, -3.5f, -1);
+                        boolLetras[2] = true;
+                    }
+                        break;
+                    case 4:
+                    if (!boolLetras[3])
+                    {
+                        R.velocity = new Vector3(curVel, 0);
+                        isOnKey = true;
+                        letra = 'r';
+                        R.transform.position = new Vector3(7.38f, -3.5f, -1);
+                        boolLetras[3] = true;
+                    }
+                        break;
+                    case 5:
+                    if (!boolLetras[4])
+                    {
+                        U.velocity = new Vector3(curVel, 0);
+                        isOnKey = true;
+                        letra = 'u';
+                        U.transform.position = new Vector3(7.38f, -3.5f, -1);
+                        boolLetras[4] = true;
+                    }
+                        break;
+                    case 6:
+                    if (!boolLetras[5])
+                    {
+                        I.velocity = new Vector3(curVel, 0);
+                        isOnKey = true;
+                        letra = 'i';
+                        I.transform.position = new Vector3(7.38f, -3.5f, -1);
+                        boolLetras[5] = true;
+                    }
+                        break;
+                    case 7:
+                    if (!boolLetras[6])
+                    {
+                        O.velocity = new Vector3(curVel, 0);
+                        isOnKey = true;
+                        letra = 'o';
+                        O.transform.position = new Vector3(7.38f, -3.5f, -1);
+                        boolLetras[6] = true;
+                    }
+                        break;
+                    case 8:
+                    if (!boolLetras[7])
+                    {
+                        P.velocity = new Vector3(curVel, 0);
+                        isOnKey = true;
+                        letra = 'p';
+                        P.transform.position = new Vector3(7.38f, -3.5f, -1);
+                        boolLetras[7] = true;
+                    }
+                        break;
+                }
+                curTime = startTime;
+                //lastTecla = tecla;
+            //}
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Tecla" && isOnKey)
+        if (collision.gameObject.name == "Tecla")
         {
             canPress = true;
         }
     }
-    void checkClick()
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        CheckCol(Q);
+        CheckCol(W);
+        CheckCol(E);
+        CheckCol(R);
+        CheckCol(U);
+        CheckCol(I);
+        CheckCol(O);
+        CheckCol(P);
+    }
+
+    void CheckCol(Rigidbody2D RB)
+    {
+        if (RB.gameObject.name == "Tecla")
+        {
+            StopAll(Q);
+            StopAll(W);
+            StopAll(E);
+            StopAll(R);
+            StopAll(U);
+            StopAll(I);
+            StopAll(O);
+            StopAll(P);
+        }
+    }
+
+    void StopAll(Rigidbody2D RB)
+    {
+        RB.transform.position = new Vector3(14.06f, -2.63f, -1);
+        RB.velocity = new Vector3(0, 0);
+        end = true;
+        curTimeToWait = timeToWait;
+        for (int i = 0; i < 8; i++)
+        {
+            boolLetras[i] = false;
+        }
+    }
+
+    public void checkClick()
     {
         if (canPress)
         {
-            if (Input.GetKeyDown(KeyCode.Q) && letra == 'q')
+            if (Input.GetKeyDown(KeyCode.Q) && boolLetras[0]/*letra == 'q'*/)
             {
                 Q.transform.position = new Vector3(11.13f, -2.55f, -1);
                 Q.velocity = new Vector3(0, 0);
                 Debug.Log("KeyPressed");
+                isOnKey = false;
                 canPress = false;
+                boolLetras[0] = false;
             }
-            else if (Input.GetKeyDown(KeyCode.W) && letra == 'w')
+            if (Input.GetKeyDown(KeyCode.W) && boolLetras[1]/*letra == 'w'*/)
             {
                 W.transform.position = new Vector3(11.28f, 0.14f, -1);
                 W.velocity = new Vector3(0, 0);
                 Debug.Log("KeyPressed");
+                isOnKey = false;
                 canPress = false;
+                boolLetras[1] = false;
             }
-            else if (Input.GetKeyDown(KeyCode.E) && letra == 'e')
+            if (Input.GetKeyDown(KeyCode.E) && boolLetras[2]/*letra == 'e'*/)
             {
                 E.transform.position = new Vector3(14.32f, 0.13f, -1);
                 E.velocity = new Vector3(0, 0);
                 Debug.Log("KeyPressed");
+                isOnKey = false;
                 canPress = false;
+                boolLetras[2] = false;
             }
-            else if (Input.GetKeyDown(KeyCode.R) && letra == 'r')
+            if (Input.GetKeyDown(KeyCode.R) && boolLetras[3]/*letra == 'r'*/)
             {
                 R.transform.position = new Vector3(14.06f, -2.63f, -1);
                 R.velocity = new Vector3(0, 0);
                 Debug.Log("KeyPressed");
+                isOnKey = false;
                 canPress = false;
+                boolLetras[3] = false;
             }
-            else if (Input.GetKeyDown(KeyCode.U) && letra == 'u')
+            if (Input.GetKeyDown(KeyCode.U) && boolLetras[4]/*letra == 'u'*/)
             {
                 U.transform.position = new Vector3(18.13f, -0.01f, -1);
                 U.velocity = new Vector3(0, 0);
                 Debug.Log("KeyPressed");
+                isOnKey = false;
                 canPress = false;
+                boolLetras[4] = false;
             }
-            else if (Input.GetKeyDown(KeyCode.I) && letra == 'i')
+            if (Input.GetKeyDown(KeyCode.I) && boolLetras[5]/*letra == 'i'*/)
             {
                 I.transform.position = new Vector3(18.16f, -2.41f, -1);
                 I.velocity = new Vector3(0, 0);
                 Debug.Log("KeyPressed");
+                isOnKey = false;
                 canPress = false;
+                boolLetras[5] = false;
             }
-            else if (Input.GetKeyDown(KeyCode.O) && letra == 'o')
+            if (Input.GetKeyDown(KeyCode.O) && boolLetras[6]/*letra == 'o'*/)
             {
                 O.transform.position = new Vector3(21.33f, 0.03f, -1);
                 O.velocity = new Vector3(0, 0);
                 Debug.Log("KeyPressed");
+                isOnKey = false;
                 canPress = false;
+                boolLetras[6] = false;
             }
-            else if (Input.GetKeyDown(KeyCode.P) && letra == 'p')
+            if (Input.GetKeyDown(KeyCode.P) && boolLetras[7]/*letra == 'p'*/)
             {
                 P.transform.position = new Vector3(21.49f, -2.56f, -1);
                 P.velocity = new Vector3(0, 0);
                 Debug.Log("KeyPressed");
+                isOnKey = false;
                 canPress = false;
+                boolLetras[7] = false;
             }
-
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            //Putear al Jugador
-            Debug.Log("TusMuertos");
-            Fase++;
-            FaseParaMonstruo = Fase;
-            if (Fase == 3)
+        else if (!canPress)
+        { 
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-                Fase = 0;
+                StopAll(Q);
+                StopAll(W);
+                StopAll(E);
+                StopAll(R);
+                StopAll(U);
+                StopAll(I);
+                StopAll(O);
+                StopAll(P);
+                end = true;
+                //Putear al Jugador
+                Debug.Log("TusMuertos");
+                Fase++;
+                FaseParaMonstruo = Fase;
+                if (Fase == 3)
+                {
+                    Fase = 0;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                StopAll(Q);
+                StopAll(W);
+                StopAll(E);
+                StopAll(R);
+                StopAll(U);
+                StopAll(I);
+                StopAll(O);
+                StopAll(P);
+                end = true;
+                //Putear al Jugador
+                Debug.Log("TusMuertos");
+                Fase++;
+                FaseParaMonstruo = Fase;
+                if (Fase == 3)
+                {
+                    Fase = 0;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                StopAll(Q);
+                StopAll(W);
+                StopAll(E);
+                StopAll(R);
+                StopAll(U);
+                StopAll(I);
+                StopAll(O);
+                StopAll(P);
+                end = true;
+                //Putear al Jugador
+                Debug.Log("TusMuertos");
+                Fase++;
+                FaseParaMonstruo = Fase;
+                if (Fase == 3)
+                {
+                    Fase = 0;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                StopAll(Q);
+                StopAll(W);
+                StopAll(E);
+                StopAll(R);
+                StopAll(U);
+                StopAll(I);
+                StopAll(O);
+                StopAll(P);
+                end = true;
+                //Putear al Jugador
+                Debug.Log("TusMuertos");
+                Fase++;
+                FaseParaMonstruo = Fase;
+                if (Fase == 3)
+                {
+                    Fase = 0;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.U))
+            {
+                StopAll(Q);
+                StopAll(W);
+                StopAll(E);
+                StopAll(R);
+                StopAll(U);
+                StopAll(I);
+                StopAll(O);
+                StopAll(P);
+                end = true;
+                //Putear al Jugador
+                Debug.Log("TusMuertos");
+                Fase++;
+                FaseParaMonstruo = Fase;
+                if (Fase == 3)
+                {
+                    Fase = 0;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                StopAll(Q);
+                StopAll(W);
+                StopAll(E);
+                StopAll(R);
+                StopAll(U);
+                StopAll(I);
+                StopAll(O);
+                StopAll(P);
+                end = true;
+                //Putear al Jugador
+                Debug.Log("TusMuertos");
+                Fase++;
+                FaseParaMonstruo = Fase;
+                if (Fase == 3)
+                {
+                    Fase = 0;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                StopAll(Q);
+                StopAll(W);
+                StopAll(E);
+                StopAll(R);
+                StopAll(U);
+                StopAll(I);
+                StopAll(O);
+                StopAll(P);
+                end = true;
+                //Putear al Jugador
+                Debug.Log("TusMuertos");
+                Fase++;
+                FaseParaMonstruo = Fase;
+                if (Fase == 3)
+                {
+                    Fase = 0;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                StopAll(Q);
+                StopAll(W);
+                StopAll(E);
+                StopAll(R);
+                StopAll(U);
+                StopAll(I);
+                StopAll(O);
+                StopAll(P);
+                end = true;
+                //Putear al Jugador
+                Debug.Log("TusMuertos");
+                Fase++;
+                FaseParaMonstruo = Fase;
+                if (Fase == 3)
+                {
+                    Fase = 0;
+                }
             }
         }
     }
-    //void NextFase()
-    //{
-    //    if (failed)
-    //    {
-    //        Fase++;
-    //        failed = false;
-    //    }
-    //}
-
-    //void CheckCollision()
-    //{
-
-    //}
 }

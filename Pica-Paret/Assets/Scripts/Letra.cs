@@ -17,12 +17,13 @@ public class Letra : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "EndPiano")
+        if (collision.gameObject.name == "Piano")
         {
-            gameObject.transform.position = new Vector3(7.38f, -3.35f, -1);
+            gameObject.transform.position = new Vector3(11.38f, -3.35f, -1);
             rigidbody2D.velocity = new Vector2(0, 0);
+            //Piano.
 
         }
     }
