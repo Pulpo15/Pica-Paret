@@ -30,21 +30,22 @@ public class Piano : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        startTime = curTime;
+        curTime = startTime;
     }
 
     // Update is called once per frame
     void Update() {
         curTime -= Time.deltaTime;
         AssignKey();
-        print(curTime);
+        Debug.Log(curTime);
+        //print(curTime);
     }
 
     void AssignKey()
     {
         while (!end && curTime <= 0)
         {
-            tecla = RandomNum.Next(1, 9);
+            tecla = RandomNum.Next(1, 2);
             switch (tecla)
             {
                 case 1:
@@ -88,10 +89,10 @@ public class Piano : MonoBehaviour {
                 //    letra = 'p';
                 //    break;
             }
-            startTime = curTime;
+            curTime = startTime;
         }
     }
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Tecla" && isOnKey)
         {
@@ -105,37 +106,38 @@ public class Piano : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Q) && letra == 'q')
             {
-                Q.transform.position = new Vector3(7.38f, -3.35f);
-                print("KeyPressed");
+                Q.transform.position = new Vector3(7.38f, -3.35f, -1);
+                Q.velocity = new Vector3(0, 0);
+                Debug.Log("KeyPressed");
             }
-            else if (Input.GetKeyDown(KeyCode.W) && letra == 'w')
-            {
+            //else if (Input.GetKeyDown(KeyCode.W) && letra == 'w')
+            //{
 
-            }
-            else if (Input.GetKeyDown(KeyCode.E) && letra == 'e')
-            {
+            //}
+            //else if (Input.GetKeyDown(KeyCode.E) && letra == 'e')
+            //{
 
-            }
-            else if (Input.GetKeyDown(KeyCode.R) && letra == 'r')
-            {
+            //}
+            //else if (Input.GetKeyDown(KeyCode.R) && letra == 'r')
+            //{
 
-            }
-            else if (Input.GetKeyDown(KeyCode.U) && letra == 'u')
-            {
+            //}
+            //else if (Input.GetKeyDown(KeyCode.U) && letra == 'u')
+            //{
 
-            }
-            else if (Input.GetKeyDown(KeyCode.I) && letra == 'i')
-            {
+            //}
+            //else if (Input.GetKeyDown(KeyCode.I) && letra == 'i')
+            //{
 
-            }
-            else if (Input.GetKeyDown(KeyCode.O) && letra == 'o')
-            {
+            //}
+            //else if (Input.GetKeyDown(KeyCode.O) && letra == 'o')
+            //{
 
-            }
-            else if (Input.GetKeyDown(KeyCode.P) && letra == 'p')
-            {
+            //}
+            //else if (Input.GetKeyDown(KeyCode.P) && letra == 'p')
+            //{
 
-            }
+            //}
         }
     }
     //void CheckCollision()
