@@ -37,7 +37,7 @@ public class Piano : MonoBehaviour {
     void Update() {
         curTime -= Time.deltaTime;
         AssignKey();
-        Debug.Log(curTime);
+        //Debug.Log(curTime);
         //print(curTime);
     }
 

@@ -1,0 +1,1311 @@
+fileFormatVersion: 2
+guid: d5308a349900b524abdc49e69dfb14ff
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: gaussian-blur-font-character-map_0
+    21300002: gaussian-blur-font-character-map_1
+    21300004: gaussian-blur-font-character-map_2
+    21300006: gaussian-blur-font-character-map_3
+    21300008: gaussian-blur-font-character-map_4
+    21300010: gaussian-blur-font-character-map_5
+    21300012: gaussian-blur-font-character-map_6
+    21300014: gaussian-blur-font-character-map_7
+    21300016: gaussian-blur-font-character-map_8
+    21300018: gaussian-blur-font-character-map_9
+    21300020: gaussian-blur-font-character-map_10
+    21300022: gaussian-blur-font-character-map_11
+    21300024: gaussian-blur-font-character-map_12
+    21300026: gaussian-blur-font-character-map_13
+    21300028: gaussian-blur-font-character-map_14
+    21300030: gaussian-blur-font-character-map_15
+    21300032: gaussian-blur-font-character-map_16
+    21300034: gaussian-blur-font-character-map_17
+    21300036: gaussian-blur-font-character-map_18
+    21300038: gaussian-blur-font-character-map_19
+    21300040: gaussian-blur-font-character-map_20
+    21300042: gaussian-blur-font-character-map_21
+    21300044: gaussian-blur-font-character-map_22
+    21300046: gaussian-blur-font-character-map_23
+    21300048: gaussian-blur-font-character-map_24
+    21300050: gaussian-blur-font-character-map_25
+    21300052: gaussian-blur-font-character-map_26
+    21300054: gaussian-blur-font-character-map_27
+    21300056: gaussian-blur-font-character-map_28
+    21300058: gaussian-blur-font-character-map_29
+    21300060: gaussian-blur-font-character-map_30
+    21300062: gaussian-blur-font-character-map_31
+    21300064: gaussian-blur-font-character-map_32
+    21300066: gaussian-blur-font-character-map_33
+    21300068: gaussian-blur-font-character-map_34
+    21300070: gaussian-blur-font-character-map_35
+    21300072: gaussian-blur-font-character-map_36
+    21300074: gaussian-blur-font-character-map_37
+    21300076: gaussian-blur-font-character-map_38
+    21300078: gaussian-blur-font-character-map_39
+    21300080: gaussian-blur-font-character-map_40
+    21300082: gaussian-blur-font-character-map_41
+    21300084: gaussian-blur-font-character-map_42
+    21300086: gaussian-blur-font-character-map_43
+    21300088: gaussian-blur-font-character-map_44
+    21300090: gaussian-blur-font-character-map_45
+    21300092: gaussian-blur-font-character-map_46
+    21300094: gaussian-blur-font-character-map_47
+    21300096: gaussian-blur-font-character-map_48
+    21300098: gaussian-blur-font-character-map_49
+    21300100: gaussian-blur-font-character-map_50
+    21300102: gaussian-blur-font-character-map_51
+    21300104: gaussian-blur-font-character-map_52
+    21300106: gaussian-blur-font-character-map_53
+    21300108: gaussian-blur-font-character-map_54
+    21300110: gaussian-blur-font-character-map_55
+    21300112: gaussian-blur-font-character-map_56
+    21300114: gaussian-blur-font-character-map_57
+    21300116: gaussian-blur-font-character-map_58
+    21300118: gaussian-blur-font-character-map_59
+    21300120: gaussian-blur-font-character-map_60
+    21300122: gaussian-blur-font-character-map_61
+    21300124: gaussian-blur-font-character-map_62
+    21300126: gaussian-blur-font-character-map_63
+    21300128: gaussian-blur-font-character-map_64
+    21300130: gaussian-blur-font-character-map_65
+    21300132: gaussian-blur-font-character-map_66
+    21300134: gaussian-blur-font-character-map_67
+    21300136: gaussian-blur-font-character-map_68
+    21300138: gaussian-blur-font-character-map_69
+    21300140: gaussian-blur-font-character-map_70
+    21300142: gaussian-blur-font-character-map_71
+    21300144: gaussian-blur-font-character-map_72
+    21300146: gaussian-blur-font-character-map_73
+    21300148: gaussian-blur-font-character-map_74
+    21300150: gaussian-blur-font-character-map_75
+    21300152: gaussian-blur-font-character-map_76
+    21300154: gaussian-blur-font-character-map_77
+    21300156: gaussian-blur-font-character-map_78
+    21300158: gaussian-blur-font-character-map_79
+    21300160: gaussian-blur-font-character-map_80
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1026
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1026
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1026
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1026
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_4
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1039
+        width: 87
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_5
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1026
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_6
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1026
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_7
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1026
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1042
+        width: 72
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 902
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_10
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 902
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_11
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 902
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_12
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 902
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_13
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 902
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_14
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 918
+        width: 91
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_15
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 921
+        width: 84
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_16
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 918
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_17
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 921
+        width: 78
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 778
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_19
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 778
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_20
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 799
+        width: 89
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_21
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 778
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_22
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 802
+        width: 95
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_23
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 778
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_24
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 778
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_25
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 778
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_26
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 778
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 654
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_28
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 654
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_29
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 654
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_30
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 654
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_31
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 654
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_32
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 654
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_33
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 654
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_34
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 654
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_35
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 654
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 530
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_37
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 530
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_38
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 530
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_39
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 530
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_40
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 530
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_41
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 530
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_42
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 530
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_43
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 530
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_44
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 530
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 406
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_46
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 406
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_47
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 406
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_48
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 406
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_49
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 406
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_50
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 406
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_51
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 406
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_52
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 406
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_53
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 406
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 282
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_55
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 282
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_56
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 282
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_57
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 282
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_58
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 282
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_59
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 282
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_60
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 282
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_61
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 282
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_62
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 282
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 158
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_64
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 158
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_65
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 158
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_66
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 158
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_67
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 158
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_68
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 158
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_69
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 158
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_70
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 158
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_71
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 158
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_73
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 34
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_74
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 34
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_75
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 34
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_76
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 34
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_77
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 34
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_78
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 34
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_79
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 34
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gaussian-blur-font-character-map_80
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 34
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
