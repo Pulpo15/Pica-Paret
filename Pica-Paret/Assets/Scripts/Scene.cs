@@ -16,9 +16,11 @@ public class Scene : MonoBehaviour {
         
 	}
 
-    public void ChangeScene(int sceneNumer)
+    public void ChangeScene(int sceneNumber)
     {
-        SceneManager.LoadScene(sceneNumer);
-        
+        SceneManager.LoadScene(sceneNumber); 
     }
+
+    
+
 }

@@ -11,3 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: f154e1ce8c4b9fc4b812401a8d743240
+  - enabled: 1
+    path: Assets/Scenes/RankingScene.unity
+    guid: 76cbb64d441b5fd47ba706e1744fc127
+  - enabled: 1
+    path: Assets/Scenes/OptionsScene.unity
+    guid: 17059941ed9ab8f408a724223cc3c12f
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 9d41b03df9f39d741abfdffc713ecc30
