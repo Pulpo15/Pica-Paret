@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Piano : MonoBehaviour {
     public bool end = false;
@@ -13,16 +16,21 @@ public class Piano : MonoBehaviour {
     public int curNumLetra;
     public int nextKeyToPress;
     public int tecla;
+
     private int curLvlTime;
     private float curTime;
     public float startTime;
-    public float upgradeTime = 2;
-    private float curVel = -5f;
+    private float upgradeTime = 0.2f;
+    private float upgradeVel = 1.1f;
+    public float curVel = -5f;
     private float timeToWait = 10;
+    private float timeLvlUp = 16f;
+    public float curTimeLvlUp;
     private float curTimeToWait;
-    public float upgradeVel;
     private char letra;
     private int lastTecla;
+    private float deadTime = 3.0f;
+    public float curDeadTime;
 
     public Rigidbody2D Q;
     public Rigidbody2D W;
@@ -33,10 +41,21 @@ public class Piano : MonoBehaviour {
     public Rigidbody2D O;
     public Rigidbody2D P;
 
+    public AudioSource Melodia;
+    private bool isOnMusic;
+    public AudioSource AudioMistake;
+
+    private float timeAudioMistake = 1f;
+    private float curTimeAudioMistake;
+    private bool musicBool;
+
     System.Random RandomNum = new System.Random();
+
+    public SkinnedMeshRenderer SpriteCap;
+    public SkinnedMeshRenderer SpriteTorso;
     //private new Vector3 startPos = Q.transform.position; 
-    public int Fase = 0;
-    public static int FaseParaMonstruo;
+    //public int Fase = 0;
+    //public static int FaseParaMonstruo;
 
     //public Collider2D QCollider;
     //public Collider2D WCollider;
@@ -47,9 +66,16 @@ public class Piano : MonoBehaviour {
     //public Collider2D OCollider;
     //public Collider2D PCollider;
 
+    public Text Marcador;
+    
     // Use this for initialization
     void Start() {
         curTime = startTime;
+        curTimeLvlUp = timeLvlUp;
+        curTimeAudioMistake = timeAudioMistake;
+        curDeadTime = deadTime;
+        SpriteCap.enabled = false;
+        SpriteTorso.enabled = false;
         for (int i = 0; i < 8; i++)
         {
             boolLetras[i] = false;
@@ -58,22 +84,71 @@ public class Piano : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        curTimeLvlUp -= Time.deltaTime;
+        if (curTimeLvlUp <= 0 && !end)
+        {
+            if (startTime > 0.5f)
+            {
+                startTime -= upgradeTime;
+            }
+            curVel *= upgradeVel;
+            curTimeLvlUp = timeLvlUp;
+        }
+        Marcador.text = Time.time.ToString();
         curTime -= Time.deltaTime;
         AssignKey();
         //Debug.Log(curTime);
         //print(curTime);
         checkClick();
+        Music();
         curTimeToWait -= Time.deltaTime;
         if (curTimeToWait <= 0)
         {
             end = false;
         }
+        if (end)
+        {
+            curDeadTime -= Time.deltaTime;
+            if (curDeadTime <= 0)
+            {
+                SpriteCap.enabled = true;
+                SpriteTorso.enabled = true;
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    SceneManager.LoadScene(5);
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                //Animacion 
+            }
+        }
+        if (musicBool)
+        {
+            curTimeAudioMistake -= Time.deltaTime;
+            if (curTimeAudioMistake <= 0)
+            {
+                AudioMistake.Play();
+                curTimeAudioMistake = timeAudioMistake;
+                musicBool = false;
+            }
+        }
     }
     
+    void Music()
+    {
+
+    }
+
     void AssignKey()
     {
         while (!end && curTime <= 0)
         {
+            if (!isOnMusic)
+            {
+                Melodia.Play();
+                isOnMusic = true;
+            }
             tecla = RandomNum.Next(1, 9);
             //if (lastTecla != tecla)
             //{
@@ -228,11 +303,25 @@ public class Piano : MonoBehaviour {
         curTimeToWait = timeToWait;
         nextKeyToPress = 0;
         curNumLetra = 0;
+        Melodia.Stop();
+        isOnMusic = false;
+        musicBool = true;
         for (int i = 0; i < 8; i++)
         {
             boolLetras[i] = false;
         }
+
+        //Si pasan dos segundos && no da a ninguna flecha
+
+
+        //menu gameover
+
+
+
+
     }
+
+
 
     public void checkClick()
     {

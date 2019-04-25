@@ -6,19 +6,53 @@ using UnityEngine.UI;
 
 public class Monstruo : MonoBehaviour {
 
+    public bool isOnRay;
+    public int numRay = 1;
     public int Fase;
     public int numSonido;
     public float startTime;
-    private float curTime;
+    public float curTime;
     public int typeOfEvent;
     private int numPos;
     public Image Background;
+    public Image SolidBackgronud;
+    public Sprite SpriteRay;
+    public Sprite SpriteDark;
+    public Sprite SpriteBackgroundRay;
+    public Sprite SpriteBackgroundDark;
+
+    public SpriteRenderer Lamp;
+    public SpriteRenderer Fitment;
+    public SpriteRenderer Bulb;
+    public SpriteRenderer Bin;
+
+    public Sprite RayLamp;
+    public Sprite RayFitment;
+    public Sprite RayBulb;
+    public Sprite RayBin;
+
+    public Sprite DarkLamp;
+    public Sprite DarkFitment;
+    public Sprite DarkBulb;
+    public Sprite DarkBin;
+
+    public double rayTime;
+    public double curRayTime;
     System.Random RandomNum = new System.Random();
-    
+    public SkinnedMeshRenderer SpriteTorso;
+    public SkinnedMeshRenderer SpriteBrazoDer;
+    public SkinnedMeshRenderer SpriteBrazoIzq;
+    public SkinnedMeshRenderer SpriteCara;
+    public AudioSource AudioRayo;
+
 
     // Use this for initialization
     void Start () {
         curTime = startTime;
+        curRayTime = rayTime;
+        //SpriteMonster = GameObject.FindGameObjectWithTag("New Prefab").GetComponent<SpriteRenderer>();
+        //SpriteMonster.enabled = false;
+        MeshMonster(false);
     }
 	
 	// Update is called once per frame
@@ -26,7 +60,45 @@ public class Monstruo : MonoBehaviour {
         //Fase = Piano.FaseParaMonstruo;
         Monster();
         Sonidos();
+        OnRay();
     }
+
+    void MeshMonster(bool Monster)
+    {
+        if (!Monster)
+        {
+            SpriteTorso.enabled = false;
+            SpriteBrazoDer.enabled = false;
+            SpriteBrazoIzq.enabled = false;
+            SpriteCara.enabled = false;
+        }
+        else if (Monster)
+        {
+            SpriteTorso.enabled = true;
+            SpriteBrazoDer.enabled = true;
+            SpriteBrazoIzq.enabled = true;
+            SpriteCara.enabled = true;
+        }
+    }
+
+    void Objects(bool Ray)
+    {
+        if (Ray)
+        {
+            Lamp.sprite = RayLamp;
+            Fitment.sprite = RayFitment;
+            Bulb.sprite = RayBulb;
+            Bin.sprite = RayBin;
+        }
+        else if (!Ray)
+        {
+            Lamp.sprite = DarkLamp;
+            Fitment.sprite = DarkFitment;
+            Bulb.sprite = DarkBulb;
+            Bin.sprite = DarkBin;
+        }
+    }
+
     void Monster()
     {
         if (curTime <= 0)
@@ -90,19 +162,61 @@ public class Monstruo : MonoBehaviour {
         if (curTime <= 0 && numSonido == 1 && typeOfEvent == 1)
         {
             //Play Sound 1
+            typeOfEvent = 0;
         }
         else if (curTime <= 0 && numSonido == 2 && typeOfEvent == 1)
         {
             //Play Sound 2
+            typeOfEvent = 0;
         }
         else if (curTime <= 0 && numSonido == 3 && typeOfEvent == 1)
         {
             //Play Sound 3
+            typeOfEvent = 0;
         }
         else if (curTime <= 0 && typeOfEvent == 2)
         {
-            Background.sprite = Resources.Load("Ray_Room.png") as Sprite;
+            //Background.sprite = Resources.Load("Ray_Room") as Sprite;
+            Background.sprite = SpriteRay;
+            SolidBackgronud.sprite = SpriteBackgroundRay;
+            isOnRay = true;
+            Objects(true);
+            typeOfEvent = 0;
         }
-
+    }
+    void OnRay()
+    {
+        if (isOnRay)
+        {
+            curRayTime -= Time.deltaTime;
+            if (curRayTime <= 0 && numRay == 1)
+            {
+                AudioRayo.Play();
+                MeshMonster(true);
+                Objects(false);
+                SolidBackgronud.sprite = SpriteBackgroundDark;
+                curRayTime = rayTime;
+                Background.sprite = SpriteDark;
+                numRay++;               
+            }
+            else if (curRayTime <= 0 && numRay == 2)
+            {
+                Objects(true);
+                SolidBackgronud.sprite = SpriteBackgroundRay;
+                curRayTime = rayTime;
+                Background.sprite = SpriteRay;
+                numRay++;
+            }
+            else if (curRayTime <= 0 && numRay == 3)
+            {
+                Objects(false);
+                SolidBackgronud.sprite = SpriteBackgroundDark;
+                curRayTime = rayTime;
+                Background.sprite = SpriteDark;
+                isOnRay = false;
+                numRay = 1;
+                MeshMonster(false);
+            }
+        }
     }
 }
