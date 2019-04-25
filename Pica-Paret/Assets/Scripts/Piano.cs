@@ -67,9 +67,12 @@ public class Piano : MonoBehaviour {
     //public Collider2D PCollider;
 
     public Text Marcador;
+    private float timeToRemove;
+    private float timeGame;
     
     // Use this for initialization
     void Start() {
+        timeToRemove = Time.time;
         curTime = startTime;
         curTimeLvlUp = timeLvlUp;
         curTimeAudioMistake = timeAudioMistake;
@@ -94,7 +97,8 @@ public class Piano : MonoBehaviour {
             curVel *= upgradeVel;
             curTimeLvlUp = timeLvlUp;
         }
-        Marcador.text = Time.time.ToString();
+        timeGame = Time.time - timeToRemove;
+        Marcador.text = timeGame.ToString();
         curTime -= Time.deltaTime;
         AssignKey();
         //Debug.Log(curTime);

@@ -831,6 +831,26 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 0.18019225
       objectReference: {fileID: 0}
+    - target: {fileID: 95088956563140734, guid: d6080c5708504d04081cfc3a14c068fa,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137650954487202224, guid: d6080c5708504d04081cfc3a14c068fa,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114376752277111064, guid: d6080c5708504d04081cfc3a14c068fa,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137357741363693158, guid: d6080c5708504d04081cfc3a14c068fa,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6080c5708504d04081cfc3a14c068fa, type: 2}
   m_IsPrefabParent: 0
@@ -1923,6 +1943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433250796}
   - component: {fileID: 1433250795}
+  - component: {fileID: 1433250797}
   m_Layer: 0
   m_Name: piano
   m_TagString: Untagged
@@ -1987,6 +2008,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1433250797
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433250794}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de52ffdc225cdde41bf7a39669c08d3c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1629689131
 GameObject:
   m_ObjectHideFlags: 0
