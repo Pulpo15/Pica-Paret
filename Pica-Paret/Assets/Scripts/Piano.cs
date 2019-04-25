@@ -9,6 +9,9 @@ public class Piano : MonoBehaviour {
     public bool canPress = false;
     public bool failed = false;
     public bool[] boolLetras = new bool[8];
+    public char[] numLetra = new char[8];
+    public int curNumLetra;
+    public int nextKeyToPress;
     public int tecla;
     private int curLvlTime;
     private float curTime;
@@ -84,6 +87,8 @@ public class Piano : MonoBehaviour {
                         letra = 'q';
                         Q.transform.position = new Vector3(7.38f, -3.5f, -1);
                         boolLetras[0] = true;
+                        numLetra[curNumLetra] = letra;
+                        curNumLetra++;
                     }
                     break;
                     case 2:
@@ -94,6 +99,8 @@ public class Piano : MonoBehaviour {
                         letra = 'w';
                         W.transform.position = new Vector3(7.38f, -3.5f, -1);
                         boolLetras[1] = true;
+                        numLetra[curNumLetra] = letra;
+                        curNumLetra++;
                     }
                     break;
                     case 3:
@@ -104,6 +111,8 @@ public class Piano : MonoBehaviour {
                         letra = 'e';
                         E.transform.position = new Vector3(7.38f, -3.5f, -1);
                         boolLetras[2] = true;
+                        numLetra[curNumLetra] = letra;
+                        curNumLetra++;
                     }
                         break;
                     case 4:
@@ -114,6 +123,8 @@ public class Piano : MonoBehaviour {
                         letra = 'r';
                         R.transform.position = new Vector3(7.38f, -3.5f, -1);
                         boolLetras[3] = true;
+                        numLetra[curNumLetra] = letra;
+                        curNumLetra++;
                     }
                         break;
                     case 5:
@@ -124,6 +135,8 @@ public class Piano : MonoBehaviour {
                         letra = 'u';
                         U.transform.position = new Vector3(7.38f, -3.5f, -1);
                         boolLetras[4] = true;
+                        numLetra[curNumLetra] = letra;
+                        curNumLetra++;
                     }
                         break;
                     case 6:
@@ -134,6 +147,8 @@ public class Piano : MonoBehaviour {
                         letra = 'i';
                         I.transform.position = new Vector3(7.38f, -3.5f, -1);
                         boolLetras[5] = true;
+                        numLetra[curNumLetra] = letra;
+                        curNumLetra++;
                     }
                         break;
                     case 7:
@@ -144,6 +159,8 @@ public class Piano : MonoBehaviour {
                         letra = 'o';
                         O.transform.position = new Vector3(7.38f, -3.5f, -1);
                         boolLetras[6] = true;
+                        numLetra[curNumLetra] = letra;
+                        curNumLetra++;
                     }
                         break;
                     case 8:
@@ -154,8 +171,14 @@ public class Piano : MonoBehaviour {
                         letra = 'p';
                         P.transform.position = new Vector3(7.38f, -3.5f, -1);
                         boolLetras[7] = true;
+                        numLetra[curNumLetra] = letra;
+                        curNumLetra++;
                     }
                         break;
+                }
+                if (curNumLetra == 8)
+                {
+                curNumLetra = 0;
                 }
                 curTime = startTime;
                 //lastTecla = tecla;
@@ -203,6 +226,8 @@ public class Piano : MonoBehaviour {
         RB.velocity = new Vector3(0, 0);
         end = true;
         curTimeToWait = timeToWait;
+        nextKeyToPress = 0;
+        curNumLetra = 0;
         for (int i = 0; i < 8; i++)
         {
             boolLetras[i] = false;
@@ -213,7 +238,7 @@ public class Piano : MonoBehaviour {
     {
         if (canPress)
         {
-            if (Input.GetKeyDown(KeyCode.Q) && boolLetras[0]/*letra == 'q'*/)
+            if (Input.GetKeyDown(KeyCode.Q) && boolLetras[0] && numLetra[nextKeyToPress] == 'q')
             {
                 Q.transform.position = new Vector3(11.13f, -2.55f, -1);
                 Q.velocity = new Vector3(0, 0);
@@ -221,8 +246,9 @@ public class Piano : MonoBehaviour {
                 isOnKey = false;
                 canPress = false;
                 boolLetras[0] = false;
+                nextKeyToPress++;
             }
-            if (Input.GetKeyDown(KeyCode.W) && boolLetras[1]/*letra == 'w'*/)
+            else if (Input.GetKeyDown(KeyCode.W) && boolLetras[1] && numLetra[nextKeyToPress] == 'w')
             {
                 W.transform.position = new Vector3(11.28f, 0.14f, -1);
                 W.velocity = new Vector3(0, 0);
@@ -230,8 +256,9 @@ public class Piano : MonoBehaviour {
                 isOnKey = false;
                 canPress = false;
                 boolLetras[1] = false;
+                nextKeyToPress++;
             }
-            if (Input.GetKeyDown(KeyCode.E) && boolLetras[2]/*letra == 'e'*/)
+            else if (Input.GetKeyDown(KeyCode.E) && boolLetras[2] && numLetra[nextKeyToPress] == 'e')
             {
                 E.transform.position = new Vector3(14.32f, 0.13f, -1);
                 E.velocity = new Vector3(0, 0);
@@ -239,8 +266,9 @@ public class Piano : MonoBehaviour {
                 isOnKey = false;
                 canPress = false;
                 boolLetras[2] = false;
+                nextKeyToPress++;
             }
-            if (Input.GetKeyDown(KeyCode.R) && boolLetras[3]/*letra == 'r'*/)
+            else if (Input.GetKeyDown(KeyCode.R) && boolLetras[3] && numLetra[nextKeyToPress] == 'r')
             {
                 R.transform.position = new Vector3(14.06f, -2.63f, -1);
                 R.velocity = new Vector3(0, 0);
@@ -248,8 +276,9 @@ public class Piano : MonoBehaviour {
                 isOnKey = false;
                 canPress = false;
                 boolLetras[3] = false;
+                nextKeyToPress++;
             }
-            if (Input.GetKeyDown(KeyCode.U) && boolLetras[4]/*letra == 'u'*/)
+            else if (Input.GetKeyDown(KeyCode.U) && boolLetras[4] && numLetra[nextKeyToPress] == 'u')
             {
                 U.transform.position = new Vector3(18.13f, -0.01f, -1);
                 U.velocity = new Vector3(0, 0);
@@ -257,8 +286,9 @@ public class Piano : MonoBehaviour {
                 isOnKey = false;
                 canPress = false;
                 boolLetras[4] = false;
+                nextKeyToPress++;
             }
-            if (Input.GetKeyDown(KeyCode.I) && boolLetras[5]/*letra == 'i'*/)
+            else if (Input.GetKeyDown(KeyCode.I) && boolLetras[5] && numLetra[nextKeyToPress] == 'i')
             {
                 I.transform.position = new Vector3(18.16f, -2.41f, -1);
                 I.velocity = new Vector3(0, 0);
@@ -266,8 +296,9 @@ public class Piano : MonoBehaviour {
                 isOnKey = false;
                 canPress = false;
                 boolLetras[5] = false;
+                nextKeyToPress++;
             }
-            if (Input.GetKeyDown(KeyCode.O) && boolLetras[6]/*letra == 'o'*/)
+            else if (Input.GetKeyDown(KeyCode.O) && boolLetras[6] && numLetra[nextKeyToPress] == 'o')
             {
                 O.transform.position = new Vector3(21.33f, 0.03f, -1);
                 O.velocity = new Vector3(0, 0);
@@ -275,8 +306,9 @@ public class Piano : MonoBehaviour {
                 isOnKey = false;
                 canPress = false;
                 boolLetras[6] = false;
+                nextKeyToPress++;
             }
-            if (Input.GetKeyDown(KeyCode.P) && boolLetras[7]/*letra == 'p'*/)
+            else if (Input.GetKeyDown(KeyCode.P) && boolLetras[7] && numLetra[nextKeyToPress] == 'p')
             {
                 P.transform.position = new Vector3(21.49f, -2.56f, -1);
                 P.velocity = new Vector3(0, 0);
@@ -284,6 +316,31 @@ public class Piano : MonoBehaviour {
                 isOnKey = false;
                 canPress = false;
                 boolLetras[7] = false;
+                nextKeyToPress++;
+            }
+            else if (Input.anyKeyDown)
+            {
+                StopAll(Q);
+                StopAll(W);
+                StopAll(E);
+                StopAll(R);
+                StopAll(U);
+                StopAll(I);
+                StopAll(O);
+                StopAll(P);
+                end = true;
+                //Putear al Jugador
+                Debug.Log("TusMuertos");
+                Fase++;
+                FaseParaMonstruo = Fase;
+                if (Fase == 7)
+                {
+                    Fase = 0;
+                }
+            }
+            if (nextKeyToPress == 8)
+            {
+                nextKeyToPress = 0;
             }
         }
         else if (!canPress)
@@ -303,7 +360,7 @@ public class Piano : MonoBehaviour {
                 Debug.Log("TusMuertos");
                 Fase++;
                 FaseParaMonstruo = Fase;
-                if (Fase == 3)
+                if (Fase == 7)
                 {
                     Fase = 0;
                 }
@@ -323,7 +380,7 @@ public class Piano : MonoBehaviour {
                 Debug.Log("TusMuertos");
                 Fase++;
                 FaseParaMonstruo = Fase;
-                if (Fase == 3)
+                if (Fase == 7)
                 {
                     Fase = 0;
                 }
@@ -343,7 +400,7 @@ public class Piano : MonoBehaviour {
                 Debug.Log("TusMuertos");
                 Fase++;
                 FaseParaMonstruo = Fase;
-                if (Fase == 3)
+                if (Fase == 7)
                 {
                     Fase = 0;
                 }
@@ -363,7 +420,7 @@ public class Piano : MonoBehaviour {
                 Debug.Log("TusMuertos");
                 Fase++;
                 FaseParaMonstruo = Fase;
-                if (Fase == 3)
+                if (Fase == 7)
                 {
                     Fase = 0;
                 }
@@ -383,7 +440,7 @@ public class Piano : MonoBehaviour {
                 Debug.Log("TusMuertos");
                 Fase++;
                 FaseParaMonstruo = Fase;
-                if (Fase == 3)
+                if (Fase == 7)
                 {
                     Fase = 0;
                 }
@@ -403,7 +460,7 @@ public class Piano : MonoBehaviour {
                 Debug.Log("TusMuertos");
                 Fase++;
                 FaseParaMonstruo = Fase;
-                if (Fase == 3)
+                if (Fase == 7)
                 {
                     Fase = 0;
                 }
@@ -423,7 +480,7 @@ public class Piano : MonoBehaviour {
                 Debug.Log("TusMuertos");
                 Fase++;
                 FaseParaMonstruo = Fase;
-                if (Fase == 3)
+                if (Fase == 7)
                 {
                     Fase = 0;
                 }
@@ -443,7 +500,7 @@ public class Piano : MonoBehaviour {
                 Debug.Log("TusMuertos");
                 Fase++;
                 FaseParaMonstruo = Fase;
-                if (Fase == 3)
+                if (Fase == 7)
                 {
                     Fase = 0;
                 }
