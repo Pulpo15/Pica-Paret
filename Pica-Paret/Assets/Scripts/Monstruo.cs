@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Monstruo : MonoBehaviour {
 
@@ -9,8 +10,9 @@ public class Monstruo : MonoBehaviour {
     public int numSonido;
     public float startTime;
     private float curTime;
-    private int typeOfEvent;
+    public int typeOfEvent;
     private int numPos;
+    public Image Background;
     System.Random RandomNum = new System.Random();
     
 
@@ -30,6 +32,7 @@ public class Monstruo : MonoBehaviour {
         if (curTime <= 0)
         {
             Fase = RandomNum.Next(1, 9);
+            typeOfEvent = RandomNum.Next(1, 3);
             curTime = startTime;
         }
         switch (Fase)
@@ -51,16 +54,22 @@ public class Monstruo : MonoBehaviour {
                 break;
             case 4:
                 //Pos 1 Medio
-                //Far
+                //Close
+                gameObject.transform.position = new Vector3(-7.78f, -0.4f, 14.58f);
+                gameObject.transform.localScale = new Vector3(0.3871875f, 0.3351564f, 1);
                 numSonido = 2;
                 break;
             case 5:
                 //Pos 2 Medio
-                //Close
+                //Far
+                gameObject.transform.position = new Vector3(-7.6091f, 0.40992f, 14.58f);
+                gameObject.transform.localScale = new Vector3(0.1170407f, 0.08446988f, 1);
                 break;
             case 6:
                 //Pos 1 Izquierda
                 //Close
+                gameObject.transform.position = new Vector3(-12.98f, -0.4f, 14.58f);
+                gameObject.transform.localScale = new Vector3(0.3871875f, 0.3351564f, 1);
                 break;
             case 7:
                 //Pos 2 Izquierda
@@ -77,7 +86,6 @@ public class Monstruo : MonoBehaviour {
     }
     void Sonidos()
     {
-        typeOfEvent = RandomNum.Next(1, 9);
         curTime -= Time.deltaTime;
         if (curTime <= 0 && numSonido == 1 && typeOfEvent == 1)
         {
@@ -91,13 +99,9 @@ public class Monstruo : MonoBehaviour {
         {
             //Play Sound 3
         }
-        else if (curTime <= 0 && numSonido == 3 && typeOfEvent == 2)
+        else if (curTime <= 0 && typeOfEvent == 2)
         {
-            //Play Ray
-        }
-        else if (curTime <= 0 && numSonido == 3 && typeOfEvent == 3)
-        {
-            //Play Sound ????
+            Background.sprite = Resources.Load("Ray_Room.png") as Sprite;
         }
 
     }
