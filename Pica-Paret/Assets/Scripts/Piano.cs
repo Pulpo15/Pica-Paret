@@ -69,7 +69,7 @@ public class Piano : MonoBehaviour {
             end = false;
         }
     }
-
+    
     void AssignKey()
     {
         while (!end && curTime <= 0)
@@ -331,12 +331,12 @@ public class Piano : MonoBehaviour {
                 end = true;
                 //Putear al Jugador
                 Debug.Log("TusMuertos");
-                Fase++;
-                FaseParaMonstruo = Fase;
-                if (Fase == 7)
-                {
-                    Fase = 0;
-                }
+                //Fase++;
+                //FaseParaMonstruo = Fase;
+                //if (Fase == 7)
+                //{
+                //    Fase = 0;
+                //}
             }
             if (nextKeyToPress == 8)
             {
@@ -358,12 +358,12 @@ public class Piano : MonoBehaviour {
                 end = true;
                 //Putear al Jugador
                 Debug.Log("TusMuertos");
-                Fase++;
-                FaseParaMonstruo = Fase;
-                if (Fase == 7)
-                {
-                    Fase = 0;
-                }
+                //Fase++;
+                //FaseParaMonstruo = Fase;
+                //if (Fase == 7)
+                //{
+                //    Fase = 0;
+                //}
             }
             if (Input.GetKeyDown(KeyCode.W))
             {
@@ -378,12 +378,12 @@ public class Piano : MonoBehaviour {
                 end = true;
                 //Putear al Jugador
                 Debug.Log("TusMuertos");
-                Fase++;
-                FaseParaMonstruo = Fase;
-                if (Fase == 7)
-                {
-                    Fase = 0;
-                }
+                //Fase++;
+                //FaseParaMonstruo = Fase;
+                //if (Fase == 7)
+                //{
+                //    Fase = 0;
+                //}
             }
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -398,12 +398,12 @@ public class Piano : MonoBehaviour {
                 end = true;
                 //Putear al Jugador
                 Debug.Log("TusMuertos");
-                Fase++;
-                FaseParaMonstruo = Fase;
-                if (Fase == 7)
-                {
-                    Fase = 0;
-                }
+                //Fase++;
+                //FaseParaMonstruo = Fase;
+                //if (Fase == 7)
+                //{
+                //    Fase = 0;
+                //}
             }
             if (Input.GetKeyDown(KeyCode.R))
             {
@@ -418,12 +418,12 @@ public class Piano : MonoBehaviour {
                 end = true;
                 //Putear al Jugador
                 Debug.Log("TusMuertos");
-                Fase++;
-                FaseParaMonstruo = Fase;
-                if (Fase == 7)
-                {
-                    Fase = 0;
-                }
+                //Fase++;
+                //FaseParaMonstruo = Fase;
+                //if (Fase == 7)
+                //{
+                //    Fase = 0;
+                //}
             }
             if (Input.GetKeyDown(KeyCode.U))
             {
@@ -438,12 +438,12 @@ public class Piano : MonoBehaviour {
                 end = true;
                 //Putear al Jugador
                 Debug.Log("TusMuertos");
-                Fase++;
-                FaseParaMonstruo = Fase;
-                if (Fase == 7)
-                {
-                    Fase = 0;
-                }
+                //Fase++;
+                //FaseParaMonstruo = Fase;
+                //if (Fase == 7)
+                //{
+                //    Fase = 0;
+                //}
             }
             if (Input.GetKeyDown(KeyCode.I))
             {
@@ -458,12 +458,12 @@ public class Piano : MonoBehaviour {
                 end = true;
                 //Putear al Jugador
                 Debug.Log("TusMuertos");
-                Fase++;
-                FaseParaMonstruo = Fase;
-                if (Fase == 7)
-                {
-                    Fase = 0;
-                }
+                //Fase++;
+                //FaseParaMonstruo = Fase;
+                //if (Fase == 7)
+                //{
+                //    Fase = 0;
+                //}
             }
             if (Input.GetKeyDown(KeyCode.O))
             {
@@ -478,12 +478,12 @@ public class Piano : MonoBehaviour {
                 end = true;
                 //Putear al Jugador
                 Debug.Log("TusMuertos");
-                Fase++;
-                FaseParaMonstruo = Fase;
-                if (Fase == 7)
-                {
-                    Fase = 0;
-                }
+                //Fase++;
+                //FaseParaMonstruo = Fase;
+                //if (Fase == 7)
+                //{
+                //    Fase = 0;
+                //}
             }
             if (Input.GetKeyDown(KeyCode.P))
             {
@@ -498,12 +498,12 @@ public class Piano : MonoBehaviour {
                 end = true;
                 //Putear al Jugador
                 Debug.Log("TusMuertos");
-                Fase++;
-                FaseParaMonstruo = Fase;
-                if (Fase == 7)
-                {
-                    Fase = 0;
-                }
+                //Fase++;
+                //FaseParaMonstruo = Fase;
+                //if (Fase == 7)
+                //{
+                //    Fase = 0;
+                //}
             }
         }
     }
