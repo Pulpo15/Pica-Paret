@@ -10,12 +10,12 @@ public class Piano : MonoBehaviour {
     public bool end = false;
     public bool isOnKey = false;
     public bool canPress = false;
-    public bool failed = false;
-    public bool[] boolLetras = new bool[8];
-    public char[] numLetra = new char[8];
-    public int curNumLetra;
-    public int nextKeyToPress;
-    public int tecla;
+    private bool failed = false;
+    private bool[] boolLetras = new bool[8];
+    private char[] numLetra = new char[8];
+    private int curNumLetra;
+    private int nextKeyToPress;
+    private int tecla;
 
     private int curLvlTime;
     private float curTime;
@@ -23,13 +23,13 @@ public class Piano : MonoBehaviour {
     private float upgradeTime = 0.2f;
     private float upgradeVel = 1.1f;
     public float curVel = -5f;
-    private float timeToWait = 10;
+    private float timeToWait = 5;
     private float timeLvlUp = 16f;
     public float curTimeLvlUp;
-    private float curTimeToWait;
+    public float curTimeToWait;
     private char letra;
     private int lastTecla;
-    private float deadTime = 3.0f;
+    private float deadTime = 2.0f;
     public float curDeadTime;
 
     public Rigidbody2D Q;
@@ -44,8 +44,9 @@ public class Piano : MonoBehaviour {
     public AudioSource Melodia;
     private bool isOnMusic;
     public AudioSource AudioMistake;
+    public AudioSource Screamer;
 
-    private float timeAudioMistake = 1f;
+    private float timeAudioMistake = 0.5f;
     private float curTimeAudioMistake;
     private bool musicBool;
 
@@ -69,9 +70,21 @@ public class Piano : MonoBehaviour {
     public Text Marcador;
     private float timeToRemove;
     private float timeGame;
-    
+    public static float timeForRecord;
+    private int numChungo = 1;
+    private bool isHiding;
+    public int Fase;
+    public Animator PianoStart;
+    public static bool endParaMonstruo;
+    public SpriteRenderer PianoIzq;
+    public SpriteRenderer PianoMid;
+    public SpriteRenderer PianoDer;
+
     // Use this for initialization
     void Start() {
+        PianoDer.enabled = false;
+        PianoMid.enabled = false;
+        PianoIzq.enabled = false;
         timeToRemove = Time.time;
         curTime = startTime;
         curTimeLvlUp = timeLvlUp;
@@ -87,6 +100,7 @@ public class Piano : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        Fase = Monstruo.FaseParaPiano;
         curTimeLvlUp -= Time.deltaTime;
         if (curTimeLvlUp <= 0 && !end)
         {
@@ -97,34 +111,70 @@ public class Piano : MonoBehaviour {
             curVel *= upgradeVel;
             curTimeLvlUp = timeLvlUp;
         }
-        timeGame = Time.time - timeToRemove;
-        Marcador.text = timeGame.ToString();
-        curTime -= Time.deltaTime;
+        if (!end)
+        {
+            timeGame = Time.time - timeToRemove;
+            Marcador.text = timeGame.ToString();
+            curTime -= Time.deltaTime;
+        }
         AssignKey();
         //Debug.Log(curTime);
         //print(curTime);
         checkClick();
-        Music();
         curTimeToWait -= Time.deltaTime;
-        if (curTimeToWait <= 0)
-        {
-            end = false;
-        }
+        SetEndFalse();
         if (end)
         {
+            endParaMonstruo = end;
             curDeadTime -= Time.deltaTime;
-            if (curDeadTime <= 0)
+            if (curDeadTime <= 0 && !isHiding)
             {
-                SpriteCap.enabled = true;
-                SpriteTorso.enabled = true;
-                if (Input.GetKeyDown(KeyCode.Escape))
-                {
-                    SceneManager.LoadScene(5);
-                }
+                Susto();
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 //Animacion 
+                isHiding = true;
+                PianoStart.SetBool("isHiding", true);
+                if (Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    PianoDer.enabled = true;
+                    PianoMid.enabled = false;
+                    PianoIzq.enabled = false;
+                    if (Fase == 1 || Fase == 2 || Fase == 3)
+                    {
+                        isHiding = false;
+                        Susto();
+                    }
+                    Debug.Log("Derecha");
+                }
+                if (Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    PianoMid.enabled = true;
+                    PianoDer.enabled = false;
+                    PianoIzq.enabled = false;
+                    //PianoStart.SetBool("isHiding", true);
+                    if (Fase == 5 || Fase == 4)
+                    {
+                        isHiding = false;
+                        Susto();
+                    }
+                    Debug.Log("Centro");
+                }
+                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    PianoIzq.enabled = true;
+                    PianoDer.enabled = false;
+                    PianoMid.enabled = false;
+                    //PianoStart.SetBool("isHiding", true);
+                    if (Fase == 6 || Fase == 7 || Fase == 8)
+                    {
+                        isHiding = false;
+                        Susto();
+                    }
+                    Debug.Log("Izquierda");
+                }
+
             }
         }
         if (musicBool)
@@ -139,9 +189,41 @@ public class Piano : MonoBehaviour {
         }
     }
     
-    void Music()
+    void Susto()
     {
+        SpriteCap.enabled = true;
+        SpriteTorso.enabled = true;
+        //Melodia.Pause();
+        //AudioMistake.Stop();
+        if (!Screamer.isPlaying)
+        {
+            Screamer.Play();
+        }
+        timeForRecord = timeGame;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(4);
+        }
+    }
 
+    void SetEndFalse()
+    {
+        if (isHiding)
+        {
+            if (curTimeToWait <= 0)
+            {
+                Debug.Log("False");
+                end = false;
+                endParaMonstruo = end;
+                isHiding = false;
+                //endParaMonstruo = end;
+                curDeadTime = deadTime;
+                PianoDer.enabled = false;
+                PianoMid.enabled = false;
+                PianoIzq.enabled = false;
+                PianoStart.SetBool("isHiding", false);
+            }
+        }
     }
 
     void AssignKey()
@@ -150,7 +232,11 @@ public class Piano : MonoBehaviour {
         {
             if (!isOnMusic)
             {
-                Melodia.Play();
+                if (numChungo == 1)
+                {
+                    Melodia.Play();
+                }
+                Melodia.UnPause();
                 isOnMusic = true;
             }
             tecla = RandomNum.Next(1, 9);
@@ -307,22 +393,14 @@ public class Piano : MonoBehaviour {
         curTimeToWait = timeToWait;
         nextKeyToPress = 0;
         curNumLetra = 0;
-        Melodia.Stop();
+        Melodia.Pause();
+        numChungo = 0;
         isOnMusic = false;
         musicBool = true;
         for (int i = 0; i < 8; i++)
         {
             boolLetras[i] = false;
         }
-
-        //Si pasan dos segundos && no da a ninguna flecha
-
-
-        //menu gameover
-
-
-
-
     }
 
 

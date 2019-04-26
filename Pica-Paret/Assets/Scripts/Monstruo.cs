@@ -44,6 +44,8 @@ public class Monstruo : MonoBehaviour {
     public SkinnedMeshRenderer SpriteBrazoIzq;
     public SkinnedMeshRenderer SpriteCara;
     public AudioSource AudioRayo;
+    public static int FaseParaPiano;
+    public bool end;
 
 
     // Use this for initialization
@@ -61,6 +63,7 @@ public class Monstruo : MonoBehaviour {
         Monster();
         Sonidos();
         OnRay();
+
     }
 
     void MeshMonster(bool Monster)
@@ -101,11 +104,14 @@ public class Monstruo : MonoBehaviour {
 
     void Monster()
     {
-        if (curTime <= 0)
+        if (curTime <= 0 && !end)
         {
-            Fase = RandomNum.Next(1, 9);
-            typeOfEvent = RandomNum.Next(1, 3);
-            curTime = startTime;
+
+                Fase = RandomNum.Next(1, 9);
+                FaseParaPiano = Fase;
+                //typeOfEvent = RandomNum.Next(1, 3);
+                curTime = startTime;
+ 
         }
         switch (Fase)
         {
@@ -159,22 +165,22 @@ public class Monstruo : MonoBehaviour {
     void Sonidos()
     {
         curTime -= Time.deltaTime;
-        if (curTime <= 0 && numSonido == 1 && typeOfEvent == 1)
-        {
-            //Play Sound 1
-            typeOfEvent = 0;
-        }
-        else if (curTime <= 0 && numSonido == 2 && typeOfEvent == 1)
-        {
-            //Play Sound 2
-            typeOfEvent = 0;
-        }
-        else if (curTime <= 0 && numSonido == 3 && typeOfEvent == 1)
-        {
-            //Play Sound 3
-            typeOfEvent = 0;
-        }
-        else if (curTime <= 0 && typeOfEvent == 2)
+        //if (curTime <= 0 && numSonido == 1 && typeOfEvent == 1)
+        //{
+        //    //Play Sound 1
+        //    typeOfEvent = 0;
+        //}
+        //else if (curTime <= 0 && numSonido == 2 && typeOfEvent == 1)
+        //{
+        //    //Play Sound 2
+        //    typeOfEvent = 0;
+        //}
+        //else if (curTime <= 0 && numSonido == 3 && typeOfEvent == 1)
+        //{
+        //    //Play Sound 3
+        //    typeOfEvent = 0;
+        end = Piano.endParaMonstruo;
+        if (curTime <= 0 && !end)
         {
             //Background.sprite = Resources.Load("Ray_Room") as Sprite;
             Background.sprite = SpriteRay;
